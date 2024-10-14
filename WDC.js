@@ -50,8 +50,10 @@ function convertToCSV(data) {
     const headers = Object.keys(data[0]);
     const csvRows = [headers.join(',')];
     
+for (const row of data) {
+    const values = header.map(header => row[header]);
+    csvRows.push(values.join(','));
+}
 
-
-
-
+return csv.Rows.join('\n');
 }
