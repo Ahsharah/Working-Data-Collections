@@ -45,3 +45,13 @@ function transformToObjects(data) {
     return { manipulatedData: data,averageAge };
   }
 
+// Part 5: Full Circle - Back to CSV
+function convertToCSV(data) {
+    const headers = Object.keys(data[0]);
+    const csvRows = [headers.join(',')];
+    
+
+
+
+
+}
