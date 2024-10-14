@@ -57,3 +57,17 @@ for (const row of data) {
 
 return csv.Rows.join('\n');
 }
+
+// Main Execution
+const parsedData = parseCSV(csvData);
+console.log("Parsed CSV:", parsedData);
+
+const trandformedData = transformToObject(parsedData);
+console.log("Transformed to objects:", transformedData);
+
+const { manipulatedData, averageAge } = manipulatedData(transformedData);
+console.log("Manipulated data:", manipulateData);
+console.log("Average age:", averageAge);
+
+constfinalCSV = convertToCSV(manipulatedData);
+console.log("Final CSV", finalCSV);
