@@ -25,3 +25,23 @@ function transformToObjects(data) {
       return obj;
     });
   }
+
+  // Part 4: Sorting and Manipulating Data
+  function manipulateData(data) {
+    
+    // Remove the last element
+    data.pop();
+
+    // Insert new object at index 1
+    data.splice(1,0, {id: "48", name: "Barry", occupation: "Runner", age: "25"});
+
+    // Add new object to the end
+    data.push ({ id: "7", name: "Bilbo", occupation: "None", age: "111"});
+
+    // Calculate average age
+    const totalAge = data.reduce((sum, person) => sum + parseInt(person.age), 0);
+    const averageAge = totalAge / data.length;
+
+    return { manipulatedData: data,averageAge };
+  }
+
