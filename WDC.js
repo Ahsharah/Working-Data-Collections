@@ -1,4 +1,4 @@
-// Sample CSV data
+/*/ Sample CSV data
 const csvData = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26";
 
 // Part 2: Expanding Functionality
@@ -69,4 +69,26 @@ console.log("Manipulated data:", manipulatedData);
 console.log("Average age:", averageAge);
 
 const finalCSV = convertToCSV(manipulatedData);
-console.log("Final CSV:", finalCSV);
+console.log("Final CSV:", finalCSV);*/
+
+
+
+
+const myPromise = new Promise((resolve,reject) => {
+
+let coinToss = Math.random() < 0.5;
+
+if(coinToss) {
+resolve("You Won!");
+}else {
+reject("You Lost :(");
+}
+});
+
+myPromise
+.then((message)=>  {
+console.log(message);
+})
+.catch((error) => {
+console.log(error);
+})
